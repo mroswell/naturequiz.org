@@ -1,6 +1,6 @@
 let myQuestions = [
   {
-    question: "<div class=\"column\"><img src='img/poison-ivy-bark-iStock-525295871.jpg' width='260px'> </div>",
+    question: "<div class=\"column\"><img src='img/poison-ivy-bark-iStock-525295871.jpg' width='270px'> </div>",
     answers: {
       a: 'Yes, this is poison ivy',
       b: 'This is not poison ivy'
@@ -8,7 +8,7 @@ let myQuestions = [
     correctAnswer: 'a'
   },
   {
-    question: "<div class=\"column\"><img src='img/poison-ivy.jpg' width='260px'> </div>",
+    question: "<div class=\"column\"><img src='img/poison-ivy.jpg' width='270px'> </div>",
     answers: {
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
@@ -16,7 +16,7 @@ let myQuestions = [
     correctAnswer: 'a'
   },
   {
-    question: "<div class=\"column\"><img src='img/poisonIvy-berries-1484539073-huge.jpg' width='260px'> </div>",
+    question: "<div class=\"column\"><img src='img/poisonIvy-berries-1484539073-huge.jpg' width='270px'> </div>",
     answers: {
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
@@ -24,7 +24,7 @@ let myQuestions = [
     correctAnswer: 'a'
   },
   {
-    question: "<div class=\"column\"><img src='img/box-elder.jpg' width='260px'> </div>",
+    question: "<div class=\"column\"><img src='img/box-elder.jpg' width='270px'> </div>",
     answers: {
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
@@ -33,7 +33,7 @@ let myQuestions = [
   },
 
   {
-    question: "<div class=\"column\"><img src='img/red-poison-ivy-AdobeStock_380922826.jpg' width='260px'> </div>",
+    question: "<div class=\"column\"><img src='img/red-poison-ivy-AdobeStock_380922826.jpg' width='270px'> </div>",
     answers: {
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
@@ -41,7 +41,7 @@ let myQuestions = [
     correctAnswer: 'a'
   },
   {
-    question: "<div class=\"column\"><img src='img/rubus-iStock-1257427951.jpg' width='260px'> </div>",
+    question: "<div class=\"column\"><img src='img/rubus-iStock-1257427951.jpg' width='270px'> </div>",
     answers: {
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
