@@ -116,7 +116,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
         numCorrect++;
 
         // color the answers green
-        answerContainers[i].style.color = 'lightgreen';
+        answerContainers[i].style.color = 'green';
       }
       // if answer is wrong or blank
       else{
