@@ -5,7 +5,8 @@ let myQuestions = [
       a: 'Yes, this is poison ivy',
       b: 'This is not poison ivy'
     },
-    correctAnswer: 'a'
+    correctAnswer: 'a',
+    comment: ''
   },
   {
     question: "<div class=\"column\"><img src='img/poison-ivy.jpg' width='270px'> </div>",
@@ -13,7 +14,8 @@ let myQuestions = [
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
     },
-    correctAnswer: 'a'
+    correctAnswer: 'a',
+    comment: ''
   },
   {
     question: "<div class=\"column\"><img src='img/poisonIvy-berries-1484539073-huge.jpg' width='270px'> </div>",
@@ -21,7 +23,8 @@ let myQuestions = [
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
     },
-    correctAnswer: 'a'
+    correctAnswer: 'a',
+    comment: ''
   },
   {
     question: "<div class=\"column\"><img src='img/box-elder.jpg' width='270px'> </div>",
@@ -29,7 +32,8 @@ let myQuestions = [
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
     },
-    correctAnswer: 'b'
+    correctAnswer: 'b',
+    comment: '<div class=\"comment\">This is Box Elder (Acer negundo).<br />See <a href="https://bplant.org/compare/90-1409">comparison</a>.</div>'
   },
 
   {
@@ -38,7 +42,8 @@ let myQuestions = [
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
     },
-    correctAnswer: 'a'
+    correctAnswer: 'a',
+    comment: ''
   },
   {
     question: "<div class=\"column\"><img src='img/rubus-iStock-1257427951.jpg' width='270px'> </div>",
@@ -46,7 +51,8 @@ let myQuestions = [
       a: 'Yes, this is poison ivy',
       b: 'No, this is not poison ivy'
     },
-    correctAnswer: 'b'
+    correctAnswer: 'b',
+    comment: '<div class=\"comment\">This is a berry (Rubus).<br /></div>'
   },
 
 ];
@@ -63,12 +69,14 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     // we'll need a place to store the output and the answer choices
     let output = [];
     let answers;
+    let comments;
 
     // for each question...
     for(let i=0; i<questions.length; i++){
 
       // first reset the list of answers
       answers = [];
+      comments = [];
 
       // for each available answer...
       for(let letter in questions[i].answers){
@@ -86,7 +94,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
       // add this question and its answers to the output
       output.push(
         '<div class="row"><div class="column question">' + questions[i].question + '</div>'
-        + '<div class="column answers">' + answers.join('') + '</div></div>'
+        + '<div class="column answers">' + answers.join('') + questions[i].comment +'</div></div>'
       );
     }
 
@@ -99,6 +107,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
     // gather answer containers from our quiz
     let answerContainers = quizContainer.querySelectorAll('.answers');
+    let commentContainers = quizContainer.querySelectorAll('.comment');
+
 
     // keep track of user's answers
     let userAnswer = '';
@@ -117,11 +127,19 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
         // color the answers green
         answerContainers[i].style.color = 'green';
+        // elt = .querySelector('.comment');
+        // elt.setAttribute("style", "display:block;");
+
       }
       // if answer is wrong or blank
       else{
         // color the answers red
         answerContainers[i].style.color = 'red';
+      }
+      if (i===3||i===5) {
+        commentContainers[0].style.display = 'block';
+        commentContainers[1].style.display = 'block';
+
       }
     }
 

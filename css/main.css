@@ -295,3 +295,7 @@ h1 {
   font-weight: bold;
   padding: 20px 0 0 20px;
 }
+
+.comment {
+  display: none;
+}
